@@ -1,0 +1,23 @@
+<table>
+  <tbody>
+    <tr>
+      <th>カレンダーに表示するトラッカーの選択</th>
+      <td>
+        <%= select_tag 'settings[traker_on_cal]', options_for_select(Tracker.all.collect{ |t| [t.name, t.id] },@settings['traker_on_cal'])%>
+      </td>
+    </tr>
+    <% custom_fields = CustomField.all.collect{ |c| [c.name, c.id] } %>
+    <tr>
+      <th>開催場所指定のカスタムフィールド</th>
+      <td>
+        <%= select_tag 'settings[place_field]', options_for_select(custom_fields,@settings['place_field'])%>
+      </td>
+    </tr>
+    <tr>
+      <th>コースの色指定のカスタムフィールド</th>
+      <td>
+        <%= select_tag 'settings[color_field]', options_for_select(custom_fields,@settings['color_field'])%>
+      </td>
+    </tr>
+  </tbody>
+</table>

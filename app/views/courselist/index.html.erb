@@ -1,0 +1,9 @@
+<div id='calendar'></div>
+<% content_for :header_tags do %>
+　　<%= stylesheet_link_tag 'fullcalendar', :plugin => 'course_list' %>
+　　<%= stylesheet_link_tag 'my', :plugin => 'course_list' %>
+    <%= javascript_include_tag 'jquery.min.js', :plugin => 'course_list' %>
+    <%= javascript_include_tag 'jquery-ui.custom.min.js', :plugin => 'course_list' %>
+    <%= javascript_include_tag 'fullcalendar.min.js', :plugin => 'course_list' %>
+    <%= javascript_include_tag 'course_list.js', :plugin => 'course_list' %>
+<% end %>

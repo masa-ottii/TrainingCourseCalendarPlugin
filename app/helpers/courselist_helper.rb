@@ -1,0 +1,2 @@
+module CourselistHelper
+end
